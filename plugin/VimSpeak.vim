@@ -3,7 +3,7 @@
 " vimspeak.vim - Speaking text with MS Agent
 "
 " Author:	Yasuhiro Matsumoto <mattn_jp@hotmail.com>
-" Last Change:	Fri, 27 Jun 2003
+" Last Change:	Mon, 30 Jun 2003
 
 function! VimSpeak() range
   " Concatenate input string.
@@ -21,5 +21,5 @@ function! VimSpeak() range
   call libcall("VimSpeak.dll", "Speak", strline)
 endfunction
 
-command! -nargs=0 -range= VimSpeak <line1>,<line2>call VimSpeak()
+command! -nargs=0 -range VimSpeak <line1>,<line2>call VimSpeak()
 

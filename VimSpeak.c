@@ -51,15 +51,13 @@ Speak(LPSTR lpszSpeak)
 	if (FAILED(hRes))
 		goto Fail;
 
-#if 0
-	hRes = pCharacterEx->lpVtbl->SetLanguageID(
-		pCharacterEx,
-		MAKELCID(MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), SORT_DEFAULT));
+#if 1
+	hRes = pCharacterEx->lpVtbl->SetLanguageID(pCharacterEx, GetUserDefaultLCID());
 	if (FAILED(hRes))
 	{
 		hRes = pCharacterEx->lpVtbl->SetLanguageID(
 			pCharacterEx,
-			MAKELANGID(LANG_ENGLISH, SUBLANG_DEFAULT));
+			MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US));
 
 		if (FAILED(hRes))
 			goto Fail;
