@@ -1,0 +1,6 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=692
+
+This calls MS AGENT and speaks (range) selected text.
+Usage:
+  [range]VimSpeak
+
